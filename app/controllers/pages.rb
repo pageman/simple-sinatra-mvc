@@ -1,3 +1,3 @@
-get '/hi' do
-  "Hello World"
+get '/' do
+  haml :index
 end
