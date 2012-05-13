@@ -11,3 +11,5 @@ shotgun -v 0.9
 rspec -v 2.10.0
 cucumber -v 1.2.0
 autotest-growl -v 0.2.16
+webrat -v 0.7.3
+rdiscount -v 1.6.8
