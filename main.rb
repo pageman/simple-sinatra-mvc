@@ -16,7 +16,7 @@ class Main < Sinatra::Base
   enable :sessions
 
   Dir["#{SINATRA_ROOT}/app/**/*.rb"].each do |file|
-    require file
+    load file
   end
 
 end
