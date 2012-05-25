@@ -21,3 +21,8 @@ rake test
 For acceptance tests, some example is also provided. Use: 
 
 cucumber or rake features should work
+
+Configuration
+-----------------------------
+You may have to update config.ru as needed. 
+
