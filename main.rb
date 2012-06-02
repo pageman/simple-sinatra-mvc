@@ -19,4 +19,5 @@ class Main < Sinatra::Base
     load file
   end
 
+  run! if app_file == $0
 end
