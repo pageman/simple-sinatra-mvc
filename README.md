@@ -1,12 +1,20 @@
 Simple Sinatra MVC Template
 ============================
 
-
 What's included
 -----------------------------
 Sprockets
 HAML
 SASS
+mysql
+coffeescript 
+
+
+``` bash
+$ git clone --depth 1 git://github.com/bridgeutopia/simple-sinatra-mvc.git myapp
+$ rm -r myapp/.git && rm myapp/README.md
+```
+
 
 Use bundler to install gems
 -----------------------------
