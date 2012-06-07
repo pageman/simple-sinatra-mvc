@@ -1,20 +1,16 @@
 require 'rubygems'
-require 'sinatra'
+require 'bundler'
+Bundler.require
+require "sinatra/reloader" if development?
+require './main'
 
-root_dir = File.dirname(__FILE__)
+map '/assets' do
+  environment = Sprockets::Environment.new
+  environment.append_path 'app/assets/javascripts'
+  environment.append_path 'app/assets/stylesheets'
+  run environment
+end
 
-set :environment, :production
-set :root,  root_dir
-
-app_file = File.join(root_dir, 'main.rb')
-require app_file
-
-disable :run
-
-FileUtils.mkdir_p 'log' unless File.exists?('log')
-log = File.new("log/sinatra.log", "a")
-$stdout.reopen(log)
-$stderr.reopen(log)
-
-run Sinatra::Application
-
+map '/' do
+  run Sinatra::Application
+end

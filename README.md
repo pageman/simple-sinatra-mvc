@@ -1,15 +1,21 @@
 Simple Sinatra MVC Template
 ============================
 
-Use dep to install gems
+
+What's included
 -----------------------------
-gem install dep && dep install 
+Sprockets
+HAML
+SASS
 
-
-Use shotgun to start app
+Use bundler to install gems
 -----------------------------
-shotgun main.rb
+bundle install
 
+
+Start the app
+-----------------------------
+rackup
 
 Unit and acceptance tests 
 -----------------------------

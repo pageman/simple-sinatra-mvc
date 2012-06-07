@@ -1,0 +1,14 @@
+!!!
+%html
+  %head
+    %title= @title || "Sinatra MVC Template"
+    %link{:href => '/assets/application.css', :rel => 'stylesheet', :type => 'text/css'}
+  %body
+    #container
+      #header
+        #logo
+          %h1
+            %a{:href => '/'}= @title || "Sinatra MVC Template"
+      #content= yield
+      #footer
+        %p#legal= "&mdash; &copy; #{Time.now.strftime('%Y')} @katgironpe &mdash;"
