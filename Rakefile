@@ -22,7 +22,7 @@ end
 
 ROOT        = Pathname(File.dirname(__FILE__))
 LOGGER      = Logger.new(STDOUT)
-BUNDLES     = %w(application.css style.css.scss)
+BUNDLES     = %w(application.css style.css.scss application.js)
 BUILD_DIR   = ROOT.join("public")
 SOURCE_DIR  = ROOT.join("app/assets")
 
