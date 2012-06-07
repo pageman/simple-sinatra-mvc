@@ -3,11 +3,7 @@ Simple Sinatra MVC Template
 
 What's included
 -----------------------------
-Sprockets
-HAML
-SASS
-mysql
-coffeescript 
+Sprockets, HAML, SASS, mysql2, coffeescript and more
 
 
 ``` bash
@@ -40,3 +36,4 @@ Configuration
 -----------------------------
 You may have to update config.ru as needed. 
 
+The Rakefile may require some updates for sprockets. As you add more assets, you would need to precompile those for production. 
