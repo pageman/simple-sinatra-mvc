@@ -35,6 +35,8 @@ GEM
     eventmachine (0.12.10)
     execjs (1.4.0)
       multi_json (~> 1.0)
+    factory_girl (3.4.0)
+      activesupport (>= 3.0.0)
     gherkin (2.10.0)
       json (>= 1.4.6)
     haml (3.1.6)
@@ -107,12 +109,14 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  activemodel (>= 3.2.5)
   activerecord (>= 3.2.5)
   activesupport (>= 3.2.5)
   autotest-growl (>= 0.2.16)
   coffee-script
   cucumber (>= 1.2.0)
   eco
+  factory_girl
   haml (>= 3.1.5)
   pony (>= 1.4)
   rake

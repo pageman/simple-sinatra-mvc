@@ -15,11 +15,12 @@ gem 'sinatra-flash', '>=0.3.0'
 gem 'pony', '>=1.4'
 gem 'activerecord', '>=3.2.5'
 gem 'activesupport', '>=3.2.5'
-
+gem 'activemodel', '>=3.2.5'
 
 group :test do 
   gem 'rspec', '>=2.10.0'
   gem 'cucumber', '>=1.2.0'
   gem 'autotest-growl', '>=0.2.16'
   gem 'webrat', '>=0.7.3'
+  gem 'factory_girl'
 end
