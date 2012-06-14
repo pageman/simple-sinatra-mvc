@@ -1,13 +1,18 @@
 require 'active_record'
 require 'fileutils'
+require 'logger'
+
 
 ENV['RACK_ENV'] ||= 'development'
 
 namespace :db do
 
+  task :loadconfig do
+    DBconfig = YAML::load( File.open('config/database.yml') )[ENV['RACK_ENV'] ]
+  end
+
   desc "create the database"
-  task :create  do
-    DBconfig = YAML::load( File.open('./config/database.yml') )[ENV['RACK_ENV'] ]
+  task :create  => :loadconfig  do
     create(DBconfig)
   end
 
@@ -63,16 +68,19 @@ namespace :db do
 
 
   desc "migrate your database"
-  task :migrate do
-    ActiveRecord::Migrator.migrate(
-      'db/migrate', 
-      ENV["VERSION"] ? ENV["VERSION"].to_i : nil
-    )
+  task :migrate  => :loadconfig do
+    migrate(DBconfig)
+  end
+
+  def migrate( config )
+    ActiveRecord::Base.logger = Logger.new(STDOUT)
+    ActiveRecord::Base.establish_connection(config)
+    ActiveRecord::Migrator.up "db/migrate/"
   end
 
   desc "create an ActiveRecord migration in ./db/migrate"
   task :create_migration do
-    name = ENV['NAME']
+    name = ENV['NAME'] || ""
     abort("no NAME specified. use `rake db:create_migration NAME=create_users`") if !name
 
     migrations_dir = File.join("db", "migrate")
@@ -95,4 +103,3 @@ namespace :db do
     end
   end
 end
-

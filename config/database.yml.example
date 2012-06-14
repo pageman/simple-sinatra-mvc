@@ -27,7 +27,7 @@ development:
 test: &test
   adapter: postgresql
   encoding: unicode
-  database: simple_sinatra_development
+  database: simple_sinatra_test
   pool: 5
   username: username
   password:
@@ -38,7 +38,7 @@ production:
   database: simple_sinatra_production
 
   pool: 5
-  username: username
+  username: katz
   password:
 
 cucumber:
