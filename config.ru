@@ -3,7 +3,7 @@ require 'bundler'
 Bundler.require
 Bundler.require :default, ENV['RACK_ENV'].to_sym
 
-require "sinatra/reloader" if ENV['RACK_ENV']=='development' 
+require "sinatra/reloader" if ENV['RACK_ENV']=='development'
 ENV['RACK_ENV'] ||= 'development'
 
 require './main'
