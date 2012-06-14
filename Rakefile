@@ -1,23 +1,21 @@
+#!/usr/bin/env rake
 require 'rubygems'
 require 'bundler'
 require 'pathname'
 require 'logger'
 require 'fileutils'
 require 'sprockets'
-
+require "bundler/gem_tasks"
 require 'cucumber/rake/task'
-require 'rake/testtask'
 
 
 Cucumber::Rake::Task.new(:features) do |t|
   t.cucumber_opts = "--format progress"
 end
 
-
 Rake::TestTask.new do |t|
   t.pattern = "test/**/*_test.rb" 
 end
-
 
 
 ROOT        = Pathname(File.dirname(__FILE__))
@@ -47,4 +45,3 @@ task :compile do
     end
   end
 end
-

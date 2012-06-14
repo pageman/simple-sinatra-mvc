@@ -1,7 +1,11 @@
 require 'rubygems'
 require 'bundler'
 Bundler.require
-require "sinatra/reloader" if development?
+Bundler.require :default, ENV['RACK_ENV'].to_sym
+
+require "sinatra/reloader" if ENV['RACK_ENV']=='development' 
+ENV['RACK_ENV'] ||= 'development'
+
 require './main'
 
 map '/assets' do
