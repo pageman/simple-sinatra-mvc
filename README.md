@@ -8,7 +8,6 @@ Sprockets, HAML, SASS, PostgreSQL gem (pg), coffee-script and more
 
 ``` bash
 $ git clone --depth 1 git://github.com/bridgeutopia/simple-sinatra-mvc.git myapp
-
 $ rm -r myapp/.git && rm myapp/README.md
 ```
 
@@ -20,14 +19,19 @@ bundle install
 
 Start the app
 -----------------------------
-rackup
+
+``` bash
+$ rackup
+```
 
 Unit and acceptance tests 
 -----------------------------
 Ruby 1.9 includes minitest so it just makes test to use minitest instead of any other framework. 
 It works and it is simple. Use:  
 
-rake test
+``` bash
+$ rake test
+```
 
 For acceptance tests, some example is also provided. Use: 
 
@@ -99,3 +103,5 @@ $ rake db:migrate
 TO DO 
 -----------------------------
 Write more rollback task for active record
+
+
