@@ -3,11 +3,12 @@ Simple Sinatra MVC Template
 
 What's included
 -----------------------------
-Sprockets, HAML, SASS, mysql2, coffeescript and more
+Sprockets, HAML, SASS, PostgreSQL gem (pg), coffee-script and more
 
 
 ``` bash
 $ git clone --depth 1 git://github.com/bridgeutopia/simple-sinatra-mvc.git myapp
+
 $ rm -r myapp/.git && rm myapp/README.md
 ```
 
@@ -95,3 +96,6 @@ The default is development so this should just work:
 $ rake db:migrate
 ```
 
+TO DO 
+-----------------------------
+Write more rollback task for active record
