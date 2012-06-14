@@ -1,4 +1,37 @@
-$green: hsl(100,100%,30%);
-h1 {
-  color: $green;
+/*
+ *= require reset
+ *= require grid
+ *= require_self
+ */
+
+
+$blue:  #003399;
+$red: #8e0600;
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  color: $blue; 
+  font: 14px Arial,Helvetica,sans-serif;
+  text-align:left;
+}
+.alerts {
+  margin: 10px 0px 10px 0px!important;
+  clear: both;
+  padding:20px 8px;
+}
+.notice {
+  color: $blue;
+}
+.errors {
+  color: $red; 
+}
+
+a {
+  color: $red;
+ }
+p {
+ padding:10px 0px;
+}
+h1, h2, h3, h4 {
+ color: $red;
 }

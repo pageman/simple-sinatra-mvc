@@ -9,13 +9,16 @@ gem 'coffee-script'
 gem 'sass'
 gem 'haml', '>=3.1.5'
 gem 'eco'
-gem 'syntax', '>=1.0.0'
 gem 'pony', '>=1.4'
 gem 'pg'
+gem 'stringex', require: 'stringex'
 gem 'activerecord', '>=3.2.5', require: "active_record"
 gem 'activesupport', '>=3.2.5', require: "active_support"
 gem 'activemodel', '>=3.2.5'
 gem 'rack-flash3', require: "rack-flash"
+
+#optional: just added for README on index. 
+gem "maruku"
 
 group :development do
   gem 'capistrano'
