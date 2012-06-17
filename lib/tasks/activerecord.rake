@@ -8,7 +8,11 @@ ENV['RACK_ENV'] ||= 'development'
 namespace :db do
 
   task :loadconfig do
-    DBconfig = YAML::load( File.open('config/database.yml') )[ENV['RACK_ENV'] ]
+    begin 
+      DBconfig = YAML::load( File.open('config/database.yml') )[ENV['RACK_ENV'] ]
+    rescue
+      DBconfig = nil 
+    end
   end
 
   desc "create the database"
@@ -67,9 +71,13 @@ namespace :db do
   end
 
 
-  desc "migrate your database"
+  desc "run migration"
   task :migrate  => :loadconfig do
-    migrate(DBconfig)
+    if DBconfig 
+      migrate(DBconfig)
+    else
+      p 'Unable to run migration'
+    end
   end
 
   def migrate( config )
