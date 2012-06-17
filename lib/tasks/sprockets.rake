@@ -3,7 +3,7 @@ require 'logger'
 require 'fileutils'
 require 'sprockets'
 
-ROOT = Pathname(File.dirname(__FILE__))
+ROOT = Pathname.new('./')
 LOGGER = Logger.new(STDOUT)
 BUNDLES = %w(application.css style.css.scss application.js)
 BUILD_DIR = ROOT.join("public")
