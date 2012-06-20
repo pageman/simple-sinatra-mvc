@@ -9,6 +9,6 @@ class HomeTest < MiniTest::Unit::TestCase
   def test_hello_world
     get '/'
     assert last_response.ok?
-    assert last_response.body.include?('Hello')
+    assert last_response.body.include?('Sinatra'), "Should include Sinatra"
   end
 end

@@ -71,7 +71,7 @@ rake db:migrate           # migrate your database
 
 rake features             # Run Cucumber features
 
-rake test                 # Run tests          # Run tests
+rake test                 # Run tests   
 
 
 To create a database for a specific environment, do: 
@@ -102,6 +102,6 @@ $ rake db:migrate
 
 TO DO 
 -----------------------------
-Write more rollback task for active record
+1. Write more tasks for active record
 
-
+2. Add more helpers 
