@@ -16,6 +16,7 @@ gem 'activerecord', '>=3.2.5', require: "active_record"
 gem 'activesupport', '>=3.2.5', require: "active_support"
 gem 'activemodel', '>=3.2.5'
 gem 'rack-flash3', require: "rack-flash"
+gem 'sinatra-partial', require: 'sinatra/partial'
 
 #optional: just added for README on index. 
 gem "maruku"

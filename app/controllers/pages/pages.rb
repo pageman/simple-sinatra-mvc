@@ -1,5 +1,3 @@
-require 'sinatra/base'
-
 module Sinatra
   module Pages
     def self.registered(app)
